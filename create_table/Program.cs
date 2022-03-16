@@ -18,7 +18,7 @@ namespace create_table
                 con.Open();
 
                 SqlCommand cm = new SqlCommand("create table Mahasiswa_Coba (NIM char(12) not null primary key, " +
-                    "Nama varchar(50), Alamat varchar(255), Jenis_kelamin(1))", con);
+                    "Nama varchar(50), Alamat varchar(255), Jenis_kelamin char(1))", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Tabel suskes dibuat");
@@ -34,8 +34,8 @@ namespace create_table
         }
         static void Main(string[] args)
         {
-            
-            
+
+            new Program().CreateTable();
         }
     }
 }
